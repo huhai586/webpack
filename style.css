@@ -1,9 +1,27 @@
-#hu{
+@import url("./another.css");
+.hu{
 	font-size: 10px;
 	color: red;
 	font-weight: bold;
 	width: 200px;
 	height:300px;
 	border: 1px solid blue;
+	/*background: url("./image2.jpg");*/
 	
+}
+
+.test{
+	color: #000;
+}
+
+.qq{
+	font-weight:bold;
+}
+
+#xx{
+	color:#000
+}
+
+:global #xx12{
+	font-size:123123px
 }
