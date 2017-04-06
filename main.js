@@ -17,4 +17,4 @@ function huhai(){
 // },4000)
 
 
-console.log("huhai")
+console.log("cctv")

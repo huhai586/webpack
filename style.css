@@ -1,4 +1,7 @@
 @import url("./another.css");
+body{
+	background:blue;
+}
 .hu{
 	font-size: 10px;
 	color: red;
