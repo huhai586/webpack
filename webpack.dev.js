@@ -3,7 +3,7 @@ var webpack=require("webpack");
 var htmlWebpackPlugin=require("html-webpack-plugin");
 
 module.exports={
-	entry:['webpack-hot-middleware/client',"./main.js"],
+	entry:["./main.js"],
 	output:{
 		path:path.resolve(__dirname, './dist'),
 		filename:"bundle.js",
@@ -35,8 +35,6 @@ module.exports={
 		]
 	},
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
         new htmlWebpackPlugin({
             filename:"index.html",
             template:"./index.html",

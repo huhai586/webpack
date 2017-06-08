@@ -1,20 +1,9 @@
-var a=require("./style.css")
-// a.use()
-console.log("css"+a.hu);
-function huhai(){
+var hu=document.getElementById("hu");
+hu.onclick=function(){
+	console.log("clicked")
+  require.ensure([], function(require) {
+    var moment = require('./outjs');
+    console.log(moment());
+  },'huhai');
 
-
-	console.log("test")
 }
-
-// setTimeout(function(){
-// 	a.ref()
-// },2000)
-//
-//
-// setTimeout(function(){
-// 	a.unref()
-// },4000)
-
-
-console.log("cctv")
