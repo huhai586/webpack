@@ -1,0 +1,27 @@
+{
+  "name": "webpack_learn",
+  "version": "1.0.0",
+  "description": "mostly feature about webpack && webpack3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huhai586/webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "learn",
+    "webpak3"
+  ],
+  "author": "huhai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huhai586/webpack/issues"
+  },
+  "homepage": "https://github.com/huhai586/webpack#readme",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
+}
