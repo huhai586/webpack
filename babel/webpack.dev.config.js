@@ -3,9 +3,6 @@
  */
 let path = require('path')
 
-var Dashboard = require('webpack-dashboard');
-var DashboardPlugin = require('webpack-dashboard/plugin');
-var dashboard = new Dashboard();
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -14,7 +11,18 @@ module.exports = {
   entry: './main.js',
   output:{
     path:path.resolve(__dirname,"dist"),
-    filename:"huhai.js"
+    filename:"bundle.js"
+  },
+  module: {
+    rules: [
+      {
+      test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use:[{
+          loader: 'babel-loader'
+        }]
+    }
+    ]
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -22,9 +30,8 @@ module.exports = {
     port: 9000
   },
   plugins: [
-    new DashboardPlugin(dashboard.setData),
     new HtmlWebpackPlugin({
-      title:"测试webpack-dashboard"
+      title:"测试babel"
     })
   ]
 }
