@@ -3,9 +3,9 @@
  */
 // import $ from 'jquery'
 let x={name:'huhai',sex:"male"}
-let y ={...x}
+let y =[1,2,3]
 function showARG() {
-  console.log(y)
+  console.log(y,arguments.length)
   debugger
 }
 

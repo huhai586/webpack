@@ -19,7 +19,14 @@ module.exports = {
       test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader'
-    }
+    },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+        ]
+      }
     ]
   },
   devServer: {
@@ -29,7 +36,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title:"测试babel"
+      title:"测试babel",
+      template:"template.html"
     })
   ]
 }
