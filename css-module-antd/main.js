@@ -4,10 +4,10 @@
 import React from 'react'
 import {Button} from 'antd'
 import ReactDOM from 'react-dom';
-require('./style.css');
-require('antd/lib/button/style/index.css')
+import style from './style.css'
+  require('antd/lib/button/style/index.css')
 var Dom = ()=>{
-  return <div> sdfsaf
+  return <div className={style.hu}> sdfsaf
     <Button type="primary">Primary</Button>
   </div>
 }
