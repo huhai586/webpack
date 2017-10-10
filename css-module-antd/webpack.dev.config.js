@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include:/node_modules/,
+        include:/node_modules\/antd/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader",options:{modules: false} }
