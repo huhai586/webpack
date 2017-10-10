@@ -33,7 +33,9 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "jquery": "^3.2.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "webpack-merge": "^4.1.0"
   }
 }

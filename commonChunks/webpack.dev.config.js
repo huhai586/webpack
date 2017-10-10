@@ -10,7 +10,7 @@ console.log('file location:----------------' +path.resolve(__dirname,"dist"))
 module.exports = {
   entry: {
     main:'./main.js',
-    other:['axios']
+    other:'./other.js'
   },
   output:{
     path:path.resolve(__dirname,"dist"),
@@ -24,9 +24,7 @@ module.exports = {
         use:[{
           loader: 'babel-loader',
           options: {
-            presets: ['env'],
-            plugins: [require('transform-runtime'),require('syntax-dynamic-import')]
-          }
+            presets: ['env']}
         }]
     }
     ]
@@ -39,6 +37,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title:"测试babel"
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+       name: 'xxx' // 指定公共 bundle 的名称。
     })
   ]
 }

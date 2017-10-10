@@ -3,10 +3,10 @@
  */
 // import $ from 'jquery'
 let x={name:'huhai',sex:"male"}
-let y ={...x}
+
 function showARG() {
-  console.log(y)
+  console.log(x)
   debugger
 }
 
-showARG(...y)
+showARG()

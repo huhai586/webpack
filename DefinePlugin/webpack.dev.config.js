@@ -2,15 +2,14 @@
  * Created by huhai on 17/6/29.
  */
 let path = require('path')
-let webpack = require('webpack')
+
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 console.log('file location:----------------' +path.resolve(__dirname,"dist"))
 module.exports = {
   entry: {
-    main:'./main.js',
-    other:['axios']
+    main:'./main.js'
   },
   output:{
     path:path.resolve(__dirname,"dist"),
@@ -22,11 +21,7 @@ module.exports = {
       test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use:[{
-          loader: 'babel-loader',
-          options: {
-            presets: ['env'],
-            plugins: [require('transform-runtime'),require('syntax-dynamic-import')]
-          }
+          loader: 'babel-loader'
         }]
     }
     ]
@@ -38,7 +33,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title:"测试babel"
+      title:"测试commonJS 与 ES6 写法"
+    }),
+    new webpack.DefinePlugin({
+      huhai:"sdf"
     })
   ]
 }
